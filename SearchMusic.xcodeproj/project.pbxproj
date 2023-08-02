@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		12FF07E12A79137700E592E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF07E02A79137700E592E9 /* AppDelegate.swift */; };
-		12FF07E32A79137700E592E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF07E22A79137700E592E9 /* SceneDelegate.swift */; };
 		12FF07E52A79137700E592E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF07E42A79137700E592E9 /* ViewController.swift */; };
 		12FF07E82A79137700E592E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12FF07E62A79137700E592E9 /* Main.storyboard */; };
 		12FF07EA2A79137B00E592E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12FF07E92A79137B00E592E9 /* Assets.xcassets */; };
@@ -16,6 +15,7 @@
 		12FF07F82A79137B00E592E9 /* SearchMusicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF07F72A79137B00E592E9 /* SearchMusicTests.swift */; };
 		12FF08022A79137B00E592E9 /* SearchMusicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF08012A79137B00E592E9 /* SearchMusicUITests.swift */; };
 		12FF08042A79137B00E592E9 /* SearchMusicUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF08032A79137B00E592E9 /* SearchMusicUITestsLaunchTests.swift */; };
+		12FF08182A7A783800E592E9 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF08172A7A783800E592E9 /* Music.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +38,6 @@
 /* Begin PBXFileReference section */
 		12FF07DD2A79137700E592E9 /* SearchMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12FF07E02A79137700E592E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		12FF07E22A79137700E592E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		12FF07E42A79137700E592E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		12FF07E72A79137700E592E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		12FF07E92A79137B00E592E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		12FF07FD2A79137B00E592E9 /* SearchMusicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SearchMusicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		12FF08012A79137B00E592E9 /* SearchMusicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMusicUITests.swift; sourceTree = "<group>"; };
 		12FF08032A79137B00E592E9 /* SearchMusicUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMusicUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		12FF08172A7A783800E592E9 /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +99,7 @@
 		12FF07DF2A79137700E592E9 /* SearchMusic */ = {
 			isa = PBXGroup;
 			children = (
+				12FF08192A7A82DC00E592E9 /* Views */,
 				12FF08162A7A5F6700E592E9 /* Controllers */,
 				12FF08142A7A5F4300E592E9 /* Services */,
 				12FF08132A7A5F3500E592E9 /* Models */,
@@ -106,7 +107,6 @@
 				12FF08112A7A5F1D00E592E9 /* Utils */,
 				12FF08102A7A5F0700E592E9 /* Extensions */,
 				12FF07E02A79137700E592E9 /* AppDelegate.swift */,
-				12FF07E22A79137700E592E9 /* SceneDelegate.swift */,
 				12FF07E42A79137700E592E9 /* ViewController.swift */,
 				12FF07E62A79137700E592E9 /* Main.storyboard */,
 				12FF07E92A79137B00E592E9 /* Assets.xcassets */,
@@ -157,6 +157,7 @@
 		12FF08132A7A5F3500E592E9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				12FF08172A7A783800E592E9 /* Music.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -173,6 +174,13 @@
 			children = (
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		12FF08192A7A82DC00E592E9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,7 +316,7 @@
 			files = (
 				12FF07E52A79137700E592E9 /* ViewController.swift in Sources */,
 				12FF07E12A79137700E592E9 /* AppDelegate.swift in Sources */,
-				12FF07E32A79137700E592E9 /* SceneDelegate.swift in Sources */,
+				12FF08182A7A783800E592E9 /* Music.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

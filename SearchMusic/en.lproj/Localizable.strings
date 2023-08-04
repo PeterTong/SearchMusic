@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  SearchMusic
+
+  Created by KwokWing Tong on 3/8/2023.
+  
+*/
+
+
+// SearchMusicViewController
+"SearchMusicViewController_searchBar_placeholder" = " Songs, Albums and Artists";

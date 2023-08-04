@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		12FF07E12A79137700E592E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF07E02A79137700E592E9 /* AppDelegate.swift */; };
-		12FF07E52A79137700E592E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF07E42A79137700E592E9 /* ViewController.swift */; };
+		12FF07E52A79137700E592E9 /* SearchMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF07E42A79137700E592E9 /* SearchMusicViewController.swift */; };
 		12FF07E82A79137700E592E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12FF07E62A79137700E592E9 /* Main.storyboard */; };
 		12FF07EA2A79137B00E592E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12FF07E92A79137B00E592E9 /* Assets.xcassets */; };
 		12FF07ED2A79137B00E592E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12FF07EB2A79137B00E592E9 /* LaunchScreen.storyboard */; };
@@ -16,6 +16,12 @@
 		12FF08022A79137B00E592E9 /* SearchMusicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF08012A79137B00E592E9 /* SearchMusicUITests.swift */; };
 		12FF08042A79137B00E592E9 /* SearchMusicUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF08032A79137B00E592E9 /* SearchMusicUITestsLaunchTests.swift */; };
 		12FF08182A7A783800E592E9 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF08172A7A783800E592E9 /* Music.swift */; };
+		12FF081C2A7BB69400E592E9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 12FF081E2A7BB69400E592E9 /* Localizable.strings */; };
+		12FF08262A7BBFF400E592E9 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF08252A7BBFF400E592E9 /* Webservice.swift */; };
+		12FF08282A7BD68700E592E9 /* Contents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF08272A7BD68700E592E9 /* Contents.swift */; };
+		12FF082C2A7BD97000E592E9 /* UIColor+Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF082B2A7BD97000E592E9 /* UIColor+Styling.swift */; };
+		12FF082E2A7BDA1200E592E9 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF082D2A7BDA1200E592E9 /* UIColor+Hex.swift */; };
+		12FF08302A7C253B00E592E9 /* Bundle+AppName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF082F2A7C253B00E592E9 /* Bundle+AppName.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,9 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		12FF07DD2A79137700E592E9 /* SearchMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		12FF07DD2A79137700E592E9 /* Search Music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Search Music.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		12FF07E02A79137700E592E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		12FF07E42A79137700E592E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		12FF07E42A79137700E592E9 /* SearchMusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMusicViewController.swift; sourceTree = "<group>"; };
 		12FF07E72A79137700E592E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		12FF07E92A79137B00E592E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12FF07EC2A79137B00E592E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +55,18 @@
 		12FF08012A79137B00E592E9 /* SearchMusicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMusicUITests.swift; sourceTree = "<group>"; };
 		12FF08032A79137B00E592E9 /* SearchMusicUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMusicUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		12FF08172A7A783800E592E9 /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
+		12FF081D2A7BB69400E592E9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		12FF081F2A7BB70900E592E9 /* zh-HK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-HK"; path = "zh-HK.lproj/Main.strings"; sourceTree = "<group>"; };
+		12FF08202A7BB70900E592E9 /* zh-HK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-HK"; path = "zh-HK.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		12FF08212A7BB70900E592E9 /* zh-HK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-HK"; path = "zh-HK.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		12FF08222A7BB74200E592E9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		12FF08232A7BB74200E592E9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		12FF08242A7BB74200E592E9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		12FF08252A7BBFF400E592E9 /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
+		12FF08272A7BD68700E592E9 /* Contents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contents.swift; sourceTree = "<group>"; };
+		12FF082B2A7BD97000E592E9 /* UIColor+Styling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Styling.swift"; sourceTree = "<group>"; };
+		12FF082D2A7BDA1200E592E9 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		12FF082F2A7C253B00E592E9 /* Bundle+AppName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+AppName.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +107,7 @@
 		12FF07DE2A79137700E592E9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				12FF07DD2A79137700E592E9 /* SearchMusic.app */,
+				12FF07DD2A79137700E592E9 /* Search Music.app */,
 				12FF07F32A79137B00E592E9 /* SearchMusicTests.xctest */,
 				12FF07FD2A79137B00E592E9 /* SearchMusicUITests.xctest */,
 			);
@@ -107,11 +125,12 @@
 				12FF08112A7A5F1D00E592E9 /* Utils */,
 				12FF08102A7A5F0700E592E9 /* Extensions */,
 				12FF07E02A79137700E592E9 /* AppDelegate.swift */,
-				12FF07E42A79137700E592E9 /* ViewController.swift */,
+				12FF07E42A79137700E592E9 /* SearchMusicViewController.swift */,
 				12FF07E62A79137700E592E9 /* Main.storyboard */,
 				12FF07E92A79137B00E592E9 /* Assets.xcassets */,
 				12FF07EB2A79137B00E592E9 /* LaunchScreen.storyboard */,
 				12FF07EE2A79137B00E592E9 /* Info.plist */,
+				12FF081E2A7BB69400E592E9 /* Localizable.strings */,
 			);
 			path = SearchMusic;
 			sourceTree = "<group>";
@@ -136,6 +155,9 @@
 		12FF08102A7A5F0700E592E9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				12FF082B2A7BD97000E592E9 /* UIColor+Styling.swift */,
+				12FF082D2A7BDA1200E592E9 /* UIColor+Hex.swift */,
+				12FF082F2A7C253B00E592E9 /* Bundle+AppName.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -143,6 +165,7 @@
 		12FF08112A7A5F1D00E592E9 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				12FF08272A7BD68700E592E9 /* Contents.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -165,6 +188,7 @@
 		12FF08142A7A5F4300E592E9 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				12FF08252A7BBFF400E592E9 /* Webservice.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -186,9 +210,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		12FF07DC2A79137700E592E9 /* SearchMusic */ = {
+		12FF07DC2A79137700E592E9 /* Search Music */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 12FF08072A79137B00E592E9 /* Build configuration list for PBXNativeTarget "SearchMusic" */;
+			buildConfigurationList = 12FF08072A79137B00E592E9 /* Build configuration list for PBXNativeTarget "Search Music" */;
 			buildPhases = (
 				12FF07D92A79137700E592E9 /* Sources */,
 				12FF07DA2A79137700E592E9 /* Frameworks */,
@@ -198,9 +222,9 @@
 			);
 			dependencies = (
 			);
-			name = SearchMusic;
+			name = "Search Music";
 			productName = SearchMusic;
-			productReference = 12FF07DD2A79137700E592E9 /* SearchMusic.app */;
+			productReference = 12FF07DD2A79137700E592E9 /* Search Music.app */;
 			productType = "com.apple.product-type.application";
 		};
 		12FF07F22A79137B00E592E9 /* SearchMusicTests */ = {
@@ -269,13 +293,15 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-HK",
+				"zh-Hans",
 			);
 			mainGroup = 12FF07D42A79137700E592E9;
 			productRefGroup = 12FF07DE2A79137700E592E9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				12FF07DC2A79137700E592E9 /* SearchMusic */,
+				12FF07DC2A79137700E592E9 /* Search Music */,
 				12FF07F22A79137B00E592E9 /* SearchMusicTests */,
 				12FF07FC2A79137B00E592E9 /* SearchMusicUITests */,
 			);
@@ -288,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				12FF07ED2A79137B00E592E9 /* LaunchScreen.storyboard in Resources */,
+				12FF081C2A7BB69400E592E9 /* Localizable.strings in Resources */,
 				12FF07EA2A79137B00E592E9 /* Assets.xcassets in Resources */,
 				12FF07E82A79137700E592E9 /* Main.storyboard in Resources */,
 			);
@@ -314,8 +341,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12FF07E52A79137700E592E9 /* ViewController.swift in Sources */,
+				12FF082E2A7BDA1200E592E9 /* UIColor+Hex.swift in Sources */,
+				12FF07E52A79137700E592E9 /* SearchMusicViewController.swift in Sources */,
+				12FF08282A7BD68700E592E9 /* Contents.swift in Sources */,
 				12FF07E12A79137700E592E9 /* AppDelegate.swift in Sources */,
+				12FF08262A7BBFF400E592E9 /* Webservice.swift in Sources */,
+				12FF082C2A7BD97000E592E9 /* UIColor+Styling.swift in Sources */,
+				12FF08302A7C253B00E592E9 /* Bundle+AppName.swift in Sources */,
 				12FF08182A7A783800E592E9 /* Music.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,12 +374,12 @@
 /* Begin PBXTargetDependency section */
 		12FF07F52A79137B00E592E9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 12FF07DC2A79137700E592E9 /* SearchMusic */;
+			target = 12FF07DC2A79137700E592E9 /* Search Music */;
 			targetProxy = 12FF07F42A79137B00E592E9 /* PBXContainerItemProxy */;
 		};
 		12FF07FF2A79137B00E592E9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 12FF07DC2A79137700E592E9 /* SearchMusic */;
+			target = 12FF07DC2A79137700E592E9 /* Search Music */;
 			targetProxy = 12FF07FE2A79137B00E592E9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -357,6 +389,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				12FF07E72A79137700E592E9 /* Base */,
+				12FF081F2A7BB70900E592E9 /* zh-HK */,
+				12FF08222A7BB74200E592E9 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -365,8 +399,20 @@
 			isa = PBXVariantGroup;
 			children = (
 				12FF07EC2A79137B00E592E9 /* Base */,
+				12FF08202A7BB70900E592E9 /* zh-HK */,
+				12FF08232A7BB74200E592E9 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		12FF081E2A7BB69400E592E9 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				12FF081D2A7BB69400E592E9 /* en */,
+				12FF08212A7BB70900E592E9 /* zh-HK */,
+				12FF08242A7BB74200E592E9 /* zh-Hans */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -376,6 +422,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -436,6 +483,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -624,7 +672,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		12FF08072A79137B00E592E9 /* Build configuration list for PBXNativeTarget "SearchMusic" */ = {
+		12FF08072A79137B00E592E9 /* Build configuration list for PBXNativeTarget "Search Music" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				12FF08082A79137B00E592E9 /* Debug */,

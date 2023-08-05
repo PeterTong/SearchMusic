@@ -15,13 +15,15 @@
 		12FF07F82A79137B00E592E9 /* SearchMusicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF07F72A79137B00E592E9 /* SearchMusicTests.swift */; };
 		12FF08022A79137B00E592E9 /* SearchMusicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF08012A79137B00E592E9 /* SearchMusicUITests.swift */; };
 		12FF08042A79137B00E592E9 /* SearchMusicUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF08032A79137B00E592E9 /* SearchMusicUITestsLaunchTests.swift */; };
-		12FF08182A7A783800E592E9 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF08172A7A783800E592E9 /* Music.swift */; };
+		12FF08182A7A783800E592E9 /* SearchMusicResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF08172A7A783800E592E9 /* SearchMusicResponse.swift */; };
 		12FF081C2A7BB69400E592E9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 12FF081E2A7BB69400E592E9 /* Localizable.strings */; };
 		12FF08262A7BBFF400E592E9 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF08252A7BBFF400E592E9 /* Webservice.swift */; };
 		12FF08282A7BD68700E592E9 /* Contents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF08272A7BD68700E592E9 /* Contents.swift */; };
 		12FF082C2A7BD97000E592E9 /* UIColor+Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF082B2A7BD97000E592E9 /* UIColor+Styling.swift */; };
 		12FF082E2A7BDA1200E592E9 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF082D2A7BDA1200E592E9 /* UIColor+Hex.swift */; };
 		12FF08302A7C253B00E592E9 /* Bundle+AppName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF082F2A7C253B00E592E9 /* Bundle+AppName.swift */; };
+		12FF08322A7CF1BF00E592E9 /* SearchMusicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF08312A7CF1BF00E592E9 /* SearchMusicViewModel.swift */; };
+		12FF08342A7D0D1900E592E9 /* MusicListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF08332A7D0D1900E592E9 /* MusicListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +56,7 @@
 		12FF07FD2A79137B00E592E9 /* SearchMusicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SearchMusicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		12FF08012A79137B00E592E9 /* SearchMusicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMusicUITests.swift; sourceTree = "<group>"; };
 		12FF08032A79137B00E592E9 /* SearchMusicUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMusicUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		12FF08172A7A783800E592E9 /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
+		12FF08172A7A783800E592E9 /* SearchMusicResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMusicResponse.swift; sourceTree = "<group>"; };
 		12FF081D2A7BB69400E592E9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		12FF081F2A7BB70900E592E9 /* zh-HK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-HK"; path = "zh-HK.lproj/Main.strings"; sourceTree = "<group>"; };
 		12FF08202A7BB70900E592E9 /* zh-HK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-HK"; path = "zh-HK.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
@@ -67,6 +69,8 @@
 		12FF082B2A7BD97000E592E9 /* UIColor+Styling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Styling.swift"; sourceTree = "<group>"; };
 		12FF082D2A7BDA1200E592E9 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		12FF082F2A7C253B00E592E9 /* Bundle+AppName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+AppName.swift"; sourceTree = "<group>"; };
+		12FF08312A7CF1BF00E592E9 /* SearchMusicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMusicViewModel.swift; sourceTree = "<group>"; };
+		12FF08332A7D0D1900E592E9 /* MusicListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +177,8 @@
 		12FF08122A7A5F2700E592E9 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
+				12FF08312A7CF1BF00E592E9 /* SearchMusicViewModel.swift */,
+				12FF08332A7D0D1900E592E9 /* MusicListViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -180,7 +186,7 @@
 		12FF08132A7A5F3500E592E9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				12FF08172A7A783800E592E9 /* Music.swift */,
+				12FF08172A7A783800E592E9 /* SearchMusicResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -341,6 +347,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12FF08342A7D0D1900E592E9 /* MusicListViewModel.swift in Sources */,
+				12FF08322A7CF1BF00E592E9 /* SearchMusicViewModel.swift in Sources */,
 				12FF082E2A7BDA1200E592E9 /* UIColor+Hex.swift in Sources */,
 				12FF07E52A79137700E592E9 /* SearchMusicViewController.swift in Sources */,
 				12FF08282A7BD68700E592E9 /* Contents.swift in Sources */,
@@ -348,7 +356,7 @@
 				12FF08262A7BBFF400E592E9 /* Webservice.swift in Sources */,
 				12FF082C2A7BD97000E592E9 /* UIColor+Styling.swift in Sources */,
 				12FF08302A7C253B00E592E9 /* Bundle+AppName.swift in Sources */,
-				12FF08182A7A783800E592E9 /* Music.swift in Sources */,
+				12FF08182A7A783800E592E9 /* SearchMusicResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

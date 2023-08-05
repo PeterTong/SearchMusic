@@ -22,7 +22,6 @@ class SearchMusicViewController: UIViewController {
 		if #available(iOS 13.0, *) {
 			let appearance = UINavigationBarAppearance()
 			appearance.titleTextAttributes = [.foregroundColor: UIColor.AppColor.blue]
-//			appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.AppColor.blue]
 			navigationItem.standardAppearance = appearance
 			navigationItem.scrollEdgeAppearance = appearance
 		} else {
@@ -36,6 +35,18 @@ class SearchMusicViewController: UIViewController {
 		searchController.searchBar.placeholder = NSLocalizedString("SearchMusicViewController_searchBar_placeholder", comment: "")
 		navigationItem.searchController = searchController
 		definesPresentationContext = true
+		
+		var lang = ""
+		let locale = Locale.current.identifier
+		if locale.contains("Hans") {
+			lang = "zh_cn"
+		}else if locale.contains("Hant"){
+			lang = "zh_hk"
+		}else{
+			lang = "en_us"
+		}
+		print(lang)
+		
 	}
 
 
@@ -44,7 +55,11 @@ class SearchMusicViewController: UIViewController {
 // MARK: - Extensions
 extension SearchMusicViewController: UISearchResultsUpdating {
 	func updateSearchResults(for searchController: UISearchController) {
-//		let searchBar = searchController.searchBar
+		let searchBar = searchController.searchBar
+		let searchMusicModel = SearchMusicViewModel()
+		searchMusicModel.searchMusic(with: searchBar.text ?? "") { musicListViewModel in
+			print(musicListViewModel.musicResults)
+		}
 
 	}
 }

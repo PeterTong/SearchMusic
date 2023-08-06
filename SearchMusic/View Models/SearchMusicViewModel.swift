@@ -9,9 +9,9 @@ import Foundation
 
 class SearchMusicViewModel {
 	
-	func searchMusic(with keyword: String,by pageNumber: Int, completion: @escaping (MusicListViewModel) -> Void) {
+	func searchMusic(with keyword: String,by pageNumber: Int,  mediaType: String, completion: @escaping (MusicListViewModel) -> Void) {
 		
-		let searchMusicURL = Constants.Urls.searchingMusicWithKeyword(keyword: keyword, pageNumber: pageNumber)
+		let searchMusicURL = Constants.Urls.searchingMusicWithKeyword(keyword: keyword, pageNumber: pageNumber, mediaType: mediaType)
 		
 		let searchMusicResource = Resource(url: searchMusicURL) { data in
 			

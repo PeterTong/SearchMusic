@@ -26,6 +26,7 @@
 		12FF08342A7D0D1900E592E9 /* MusicListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF08332A7D0D1900E592E9 /* MusicListViewModel.swift */; };
 		12FF08372A7E846E00E592E9 /* MusicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF08362A7E846E00E592E9 /* MusicTableViewCell.swift */; };
 		12FF08392A7EC71300E592E9 /* UIImageView+LoadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF08382A7EC71300E592E9 /* UIImageView+LoadImage.swift */; };
+		12FF083B2A7FD79100E592E9 /* MediaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF083A2A7FD79100E592E9 /* MediaType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		12FF08332A7D0D1900E592E9 /* MusicListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicListViewModel.swift; sourceTree = "<group>"; };
 		12FF08362A7E846E00E592E9 /* MusicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTableViewCell.swift; sourceTree = "<group>"; };
 		12FF08382A7EC71300E592E9 /* UIImageView+LoadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+LoadImage.swift"; sourceTree = "<group>"; };
+		12FF083A2A7FD79100E592E9 /* MediaType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +136,6 @@
 				12FF08112A7A5F1D00E592E9 /* Utils */,
 				12FF08102A7A5F0700E592E9 /* Extensions */,
 				12FF07E02A79137700E592E9 /* AppDelegate.swift */,
-				12FF07E42A79137700E592E9 /* SearchMusicViewController.swift */,
 				12FF07E62A79137700E592E9 /* Main.storyboard */,
 				12FF07E92A79137B00E592E9 /* Assets.xcassets */,
 				12FF07EB2A79137B00E592E9 /* LaunchScreen.storyboard */,
@@ -193,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				12FF08172A7A783800E592E9 /* SearchMusicResponse.swift */,
+				12FF083A2A7FD79100E592E9 /* MediaType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -208,6 +210,7 @@
 		12FF08162A7A5F6700E592E9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				12FF07E42A79137700E592E9 /* SearchMusicViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12FF083B2A7FD79100E592E9 /* MediaType.swift in Sources */,
 				12FF08342A7D0D1900E592E9 /* MusicListViewModel.swift in Sources */,
 				12FF08322A7CF1BF00E592E9 /* SearchMusicViewModel.swift in Sources */,
 				12FF082E2A7BDA1200E592E9 /* UIColor+Hex.swift in Sources */,

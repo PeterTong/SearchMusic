@@ -16,11 +16,11 @@ struct SearchMusicResponse: Decodable{
 struct Music: Codable{
 	let wrapperType: String
 	let kind: String
-	let artistId: Int
+	let artistId: Int?
 	let trackId: Int
 	let artistName: String
 	let trackName: String
-	let artistViewUrl: String
+	let artistViewUrl: String?
 	let trackViewUrl: String
 	let previewUrl: String
 	let artworkUrl60: String

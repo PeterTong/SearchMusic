@@ -7,3 +7,6 @@
 */
 // SearchMusicViewController
 "SearchMusicViewController_searchBar_placeholder" = " 歌曲、專輯和藝人";
+"SearchMusicViewController_searchBar_scopeButtonTitles_music" = "音樂";
+"SearchMusicViewController_searchBar_scopeButtonTitles_musicVideo" = "音樂視頻";
+"SearchMusicViewController_searchBar_scopeButtonTitles_movie" = "電影";

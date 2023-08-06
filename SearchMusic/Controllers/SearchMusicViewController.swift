@@ -43,6 +43,8 @@ class SearchMusicViewController: UIViewController {
 		navigationItem.searchController = searchController
 		definesPresentationContext = true
 		
+		searchController.searchBar.scopeButtonTitles = MediaType.Name.allCases.map { $0.displayName }
+		searchController.searchBar.delegate = self
 		
 		
 	}
@@ -50,6 +52,18 @@ class SearchMusicViewController: UIViewController {
 		pageNumber = 1
 		isLoading = false
 	}
+	
+	func fetchMusicData() {
+		let searchBar = searchController.searchBar
+		let searchMusicModel = SearchMusicViewModel()
+		
+		searchMusicModel.searchMusic(with: searchBar.text ?? "", by: pageNumber, mediaType: MediaType.Name.allCases[searchBar.selectedScopeButtonIndex].rawValue) { musicListViewModel in
+			print(musicListViewModel.musicViewModel)
+			self.musicListViewModel = musicListViewModel
+			self.tableView.reloadData()
+		}
+	}
+	
 
 
 }
@@ -57,16 +71,18 @@ class SearchMusicViewController: UIViewController {
 // MARK: - Extensions
 extension SearchMusicViewController: UISearchResultsUpdating {
 	func updateSearchResults(for searchController: UISearchController) {
-		let searchBar = searchController.searchBar
-		let searchMusicModel = SearchMusicViewModel()
-		resetPageNumber()
 		
-		searchMusicModel.searchMusic(with: searchBar.text ?? "", by: pageNumber) { musicListViewModel in
-			print(musicListViewModel.musicViewModel)
-			self.musicListViewModel = musicListViewModel
-			self.tableView.reloadData()
-		}
+		resetPageNumber()
+		fetchMusicData()
 
+	}
+}
+
+extension SearchMusicViewController: UISearchBarDelegate {
+	func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+		resetPageNumber()
+		fetchMusicData()
+		
 	}
 }
 
@@ -110,13 +126,8 @@ extension SearchMusicViewController: UITableViewDelegate, UITableViewDataSource{
 				DispatchQueue.main.async {
 					
 					self.pageNumber += 1
-					SearchMusicViewModel().searchMusic(with: self.searchController.searchBar.text ?? "", by: self.pageNumber) { musicListViewModel in
-						self.isLoading = false
-						
-						self.musicListViewModel = musicListViewModel
-						self.tableView.reloadData()
-
-					}
+					self.fetchMusicData()
+					self.isLoading = false
 					
 				}
 			}

@@ -9,3 +9,6 @@
 
 // SearchMusicViewController
 "SearchMusicViewController_searchBar_placeholder" = " Songs, Albums and Artists";
+"SearchMusicViewController_searchBar_scopeButtonTitles_music" = "Music";
+"SearchMusicViewController_searchBar_scopeButtonTitles_musicVideo" = "Music Video";
+"SearchMusicViewController_searchBar_scopeButtonTitles_movie" = "Movie";

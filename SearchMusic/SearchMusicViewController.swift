@@ -13,6 +13,8 @@ class SearchMusicViewController: UIViewController {
 	
 	let searchController = UISearchController(searchResultsController: nil)
 	var musicListViewModel = MusicListViewModel(music: SearchMusicResponse(resultCount: 0, results: []))
+	var pageNumber = 1
+	var isLoading = false
 	
 	// MARK: - Methods
 
@@ -44,6 +46,10 @@ class SearchMusicViewController: UIViewController {
 		
 		
 	}
+	func resetPageNumber() {
+		pageNumber = 1
+		isLoading = false
+	}
 
 
 }
@@ -53,7 +59,9 @@ extension SearchMusicViewController: UISearchResultsUpdating {
 	func updateSearchResults(for searchController: UISearchController) {
 		let searchBar = searchController.searchBar
 		let searchMusicModel = SearchMusicViewModel()
-		searchMusicModel.searchMusic(with: searchBar.text ?? "") { musicListViewModel in
+		resetPageNumber()
+		
+		searchMusicModel.searchMusic(with: searchBar.text ?? "", by: pageNumber) { musicListViewModel in
 			print(musicListViewModel.musicViewModel)
 			self.musicListViewModel = musicListViewModel
 			self.tableView.reloadData()
@@ -63,6 +71,7 @@ extension SearchMusicViewController: UISearchResultsUpdating {
 }
 
 extension SearchMusicViewController: UITableViewDelegate, UITableViewDataSource{
+	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		self.musicListViewModel.numberOfRows(section)
 	}
@@ -73,6 +82,7 @@ extension SearchMusicViewController: UITableViewDelegate, UITableViewDataSource{
 		
 		let music = self.musicListViewModel.modelAt(indexPath.row)
 		cell.configure(music)
+		cell.layoutIfNeeded()
 		return cell
 		
 	}
@@ -85,8 +95,33 @@ extension SearchMusicViewController: UITableViewDelegate, UITableViewDataSource{
 		return 80
 	}
 	
+	func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+		if indexPath.row == self.musicListViewModel.musicViewModel.count - 1, !isLoading{
+			loadMoreData()
+		}
+	}
+
 	
-	
+	func loadMoreData() {
+		if !self.isLoading && self.pageNumber*20 <= self.musicListViewModel.musicViewModel.count {
+			self.isLoading = true
+			DispatchQueue.global().asyncAfter(deadline: .now() + 0.5) { // Remove the 1-second delay if you want to load the data without waiting
+				// Download more data here
+				DispatchQueue.main.async {
+					
+					self.pageNumber += 1
+					SearchMusicViewModel().searchMusic(with: self.searchController.searchBar.text ?? "", by: self.pageNumber) { musicListViewModel in
+						self.isLoading = false
+						
+						self.musicListViewModel = musicListViewModel
+						self.tableView.reloadData()
+
+					}
+					
+				}
+			}
+		}
+	}
 	
 	
 }

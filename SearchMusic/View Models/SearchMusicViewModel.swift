@@ -9,13 +9,20 @@ import Foundation
 
 class SearchMusicViewModel {
 	
-	func searchMusic(with keyword: String, completion: @escaping (MusicListViewModel) -> Void) {
+	func searchMusic(with keyword: String,by pageNumber: Int, completion: @escaping (MusicListViewModel) -> Void) {
 		
-		let searchMusicURL = Constants.Urls.searchingMusicWithKeyword(keyword: keyword)
+		let searchMusicURL = Constants.Urls.searchingMusicWithKeyword(keyword: keyword, pageNumber: pageNumber)
 		
 		let searchMusicResource = Resource(url: searchMusicURL) { data in
-			let searchMusicResponse = try? JSONDecoder().decode(SearchMusicResponse.self, from: data)
-			return searchMusicResponse
+			
+			do {
+				let searchMusicResponse = try JSONDecoder().decode(SearchMusicResponse.self, from: data)
+				return searchMusicResponse
+			} catch  {
+				print("JSONDecoder().decode Error: \(error.localizedDescription)")
+				return nil
+			}
+			
 		}
 		
 		Webservice().load(resource: searchMusicResource) { result in

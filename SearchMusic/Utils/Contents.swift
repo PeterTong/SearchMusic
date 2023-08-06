@@ -11,7 +11,7 @@ struct Constants {
 	
 	struct Urls {
 		
-		static func searchingMusicWithKeyword(keyword: String) -> URL {
+		static func searchingMusicWithKeyword(keyword: String, pageNumber: Int) -> URL {
 			
 			// find the language parameter
 			var lang = ""
@@ -24,7 +24,7 @@ struct Constants {
 				lang = "en_us"
 			}
 			let term = keyword.replacingOccurrences(of: " ", with: "+")
-			let limit = 20
+			let limit = 20 * pageNumber
 			let media = "music"
 			
 			return URL(string: "https://itunes.apple.com/search?term=\(term)&limit=\(limit)&media=\(media)&lang=\(lang)&explicit=No")!

@@ -12,7 +12,7 @@
         <!--Search Music View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SearchMusicViewController" customModule="SearchMusic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SearchMusicViewController" customModule="Search_Music" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,13 +21,57 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="dfo-Wh-dQa">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MusicTableViewCell" rowHeight="80" id="dfo-Wh-dQa" customClass="MusicTableViewCell" customModule="Search_Music" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dfo-Wh-dQa" id="8Ua-8I-Aud">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eO0-rl-Ux3">
+                                                    <rect key="frame" x="10" y="8" width="64" height="64"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="64" id="Haq-UO-AQh"/>
+                                                        <constraint firstAttribute="height" constant="60" id="hW0-u8-j4H"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inside" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98o-k8-evM">
+                                                    <rect key="frame" x="84" y="19" width="279" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="dOd-LG-GBm"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="milet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaL-rB-Vgv">
+                                                    <rect key="frame" x="84" y="44" width="279" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="2TD-xR-OnY"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="M3f-1g-wv5"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="16"/>
+                                                    <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gaL-rB-Vgv" firstAttribute="top" secondItem="98o-k8-evM" secondAttribute="bottom" id="BVz-Gq-Ft3"/>
+                                                <constraint firstItem="eO0-rl-Ux3" firstAttribute="top" secondItem="8Ua-8I-Aud" secondAttribute="top" constant="8" id="BWj-uE-wm0"/>
+                                                <constraint firstItem="gaL-rB-Vgv" firstAttribute="leading" secondItem="98o-k8-evM" secondAttribute="leading" id="IpT-nc-KKM"/>
+                                                <constraint firstItem="eO0-rl-Ux3" firstAttribute="leading" secondItem="8Ua-8I-Aud" secondAttribute="leading" constant="10" id="PcL-HY-Pbd"/>
+                                                <constraint firstItem="gaL-rB-Vgv" firstAttribute="centerX" secondItem="98o-k8-evM" secondAttribute="centerX" id="eBN-b4-Zy8"/>
+                                                <constraint firstItem="98o-k8-evM" firstAttribute="top" secondItem="8Ua-8I-Aud" secondAttribute="topMargin" constant="8" id="eaF-Cy-nkQ"/>
+                                                <constraint firstItem="98o-k8-evM" firstAttribute="leading" secondItem="eO0-rl-Ux3" secondAttribute="trailing" constant="10" id="jdU-I8-b83"/>
+                                                <constraint firstAttribute="bottom" secondItem="eO0-rl-Ux3" secondAttribute="bottom" constant="8" id="lfS-aa-EGb"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="98o-k8-evM" secondAttribute="trailing" constant="10" id="qP4-Zj-PJL"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="albumArtImageView" destination="eO0-rl-Ux3" id="p1t-JU-m1V"/>
+                                            <outlet property="artistLabel" destination="gaL-rB-Vgv" id="zku-Iy-gT1"/>
+                                            <outlet property="songNameLabel" destination="98o-k8-evM" id="2qD-uF-drV"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
@@ -43,10 +87,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EOn-eN-PdQ"/>
+                    <connections>
+                        <outlet property="tableView" destination="aMD-Xv-krI" id="D1S-sC-I0T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="912.2137404580152" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="869" y="-27"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GG8-ab-DfX">

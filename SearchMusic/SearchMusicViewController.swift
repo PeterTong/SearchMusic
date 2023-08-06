@@ -9,13 +9,18 @@ import UIKit
 
 class SearchMusicViewController: UIViewController {
 	// MARK: - Properties
-	let searchController = UISearchController(searchResultsController: nil)
+	@IBOutlet weak var tableView: UITableView!
 	
+	let searchController = UISearchController(searchResultsController: nil)
+	var musicListViewModel = MusicListViewModel(music: SearchMusicResponse(resultCount: 0, results: []))
 	
 	// MARK: - Methods
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
+		self.tableView.delegate = self
+		self.tableView.dataSource = self
 		
 		// navigation title
 		navigationItem.title = Bundle.main.appName
@@ -36,16 +41,7 @@ class SearchMusicViewController: UIViewController {
 		navigationItem.searchController = searchController
 		definesPresentationContext = true
 		
-		var lang = ""
-		let locale = Locale.current.identifier
-		if locale.contains("Hans") {
-			lang = "zh_cn"
-		}else if locale.contains("Hant"){
-			lang = "zh_hk"
-		}else{
-			lang = "en_us"
-		}
-		print(lang)
+		
 		
 	}
 
@@ -58,10 +54,41 @@ extension SearchMusicViewController: UISearchResultsUpdating {
 		let searchBar = searchController.searchBar
 		let searchMusicModel = SearchMusicViewModel()
 		searchMusicModel.searchMusic(with: searchBar.text ?? "") { musicListViewModel in
-			print(musicListViewModel.musicResults)
+			print(musicListViewModel.musicViewModel)
+			self.musicListViewModel = musicListViewModel
+			self.tableView.reloadData()
 		}
 
 	}
+}
+
+extension SearchMusicViewController: UITableViewDelegate, UITableViewDataSource{
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		self.musicListViewModel.numberOfRows(section)
+	}
+	
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		
+		let cell = tableView.dequeueReusableCell(withIdentifier: "MusicTableViewCell", for: indexPath) as! MusicTableViewCell
+		
+		let music = self.musicListViewModel.modelAt(indexPath.row)
+		cell.configure(music)
+		return cell
+		
+	}
+	
+	func numberOfSections(in tableView: UITableView) -> Int {
+		return 1
+	}
+	
+	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		return 80
+	}
+	
+	
+	
+	
+	
 }
 
 

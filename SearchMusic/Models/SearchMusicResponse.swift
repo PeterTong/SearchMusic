@@ -10,10 +10,10 @@ import Foundation
 
 struct SearchMusicResponse: Decodable{
 	let resultCount: Int
-	let results: [results]
+	let results: [Music]
 }
 
-struct results: Decodable{
+struct Music: Codable{
 	let wrapperType: String
 	let kind: String
 	let artistId: Int

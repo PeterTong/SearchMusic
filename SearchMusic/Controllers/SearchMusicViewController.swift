@@ -16,6 +16,8 @@ class SearchMusicViewController: UIViewController {
 	var pageNumber = 1
 	var isLoading = false
 	
+	var bookmarkSongs = BookmarkSongViewModel()
+	
 	// MARK: - Methods
 
 	override func viewDidLoad() {
@@ -58,7 +60,6 @@ class SearchMusicViewController: UIViewController {
 		let searchMusicModel = SearchMusicViewModel()
 		
 		searchMusicModel.searchMusic(with: searchBar.text ?? "", by: pageNumber, mediaType: MediaType.Name.allCases[searchBar.selectedScopeButtonIndex].rawValue) { musicListViewModel in
-			print(musicListViewModel.musicViewModel)
 			self.musicListViewModel = musicListViewModel
 			self.tableView.reloadData()
 		}
@@ -98,6 +99,14 @@ extension SearchMusicViewController: UITableViewDelegate, UITableViewDataSource{
 		
 		let music = self.musicListViewModel.modelAt(indexPath.row)
 		cell.configure(music)
+		cell.callbackButtonClicked = { button in
+			if button.isSelected {
+				self.bookmarkSongs.add(music)
+			}else{
+				self.bookmarkSongs.remove(music)
+			}
+		}
+		cell.bookmarkButton.isSelected = self.bookmarkSongs.contain(music)
 		cell.layoutIfNeeded()
 		return cell
 		

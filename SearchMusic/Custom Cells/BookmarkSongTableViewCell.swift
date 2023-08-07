@@ -1,21 +1,18 @@
 //
-//  MusicTableViewCell.swift
+//  BookmarkSongTableViewCell.swift
 //  Search Music
 //
-//  Created by KwokWing Tong on 5/8/2023.
+//  Created by KwokWing Tong on 7/8/2023.
 //
 
 import UIKit
 
-class MusicTableViewCell: UITableViewCell {
-	
+class BookmarkSongTableViewCell: UITableViewCell {
+
 	@IBOutlet weak var albumArtImageView: UIImageView!
 	@IBOutlet weak var songNameLabel: UILabel!
 	@IBOutlet weak var artistLabel: UILabel!
-	@IBOutlet weak var bookmarkButton: UIButton!
-	
-	var callbackButtonClicked : ((UIButton) -> Void)?
-	
+
 	func configure(_ music: Music) {
 		styleUI()
 		self.artistLabel.text = music.artistName
@@ -27,10 +24,5 @@ class MusicTableViewCell: UITableViewCell {
 		self.albumArtImageView.layer.cornerRadius = 8
 		self.albumArtImageView.layer.masksToBounds = true
 	}
-	
-	@IBAction func bookmarkSong(_ sender: UIButton) {
-		sender.isSelected = !sender.isSelected
-		self.callbackButtonClicked?(sender)
-	}
-	
+
 }

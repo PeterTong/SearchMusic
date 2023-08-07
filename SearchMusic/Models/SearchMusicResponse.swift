@@ -13,7 +13,7 @@ struct SearchMusicResponse: Decodable{
 	let results: [Music]
 }
 
-struct Music: Codable{
+struct Music: Codable,Hashable{
 	let wrapperType: String
 	let kind: String
 	let artistId: Int?
